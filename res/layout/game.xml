@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:focusableInTouchMode="false" android:id="@id/linearLayout"
+              android:background="@drawable/header">
+
+    <ImageButton android:layout_width="60dp" android:layout_height="60dp" android:id="@id/colorToClick"
+                 android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                 android:visibility="visible" android:background="#ff8500" android:layout_gravity="center"
+                 android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Timer Text"
+            android:id="@id/timerTextView" android:layout_gravity="center" android:textColor="@android:color/white"
+            android:textSize="18sp" android:textStyle="bold" style="@style/TimerText"
+            android:layout_centerHorizontal="true" android:layout_marginTop="60dp"/>
+    <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@id/button_sounds"
+            android:layout_marginRight="5dp" android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" android:layout_marginTop="5dp" android:onClick="onSoundsClick"/>
+    <ImageButton android:layout_width="35dp" android:layout_height="35dp" android:id="@id/button_music"
+                 android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                 android:layout_marginTop="5dp" android:layout_marginRight="40dp" android:visibility="visible"
+                 android:onClick="onMusicClick"/>
+    <ImageButton android:layout_width="35dp" android:layout_height="35dp" android:id="@id/button_vibrate"
+                 android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                 android:layout_marginTop="5dp" android:layout_marginRight="75dp" android:onClick="onVibrateClick"
+            />
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:id="@id/header_border" android:background="@drawable/border" android:layout_marginTop="90dp"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="center" android:id="@id/relativeLayout"
+            android:tileMode="repeat" android:focusable="false" android:focusableInTouchMode="false"
+            android:layout_marginTop="100dp">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Score"
+                  android:id="@id/scoreTextView" android:layout_gravity="center"
+                  android:gravity="center_vertical|center_horizontal" android:textSize="45sp" style="@style/ScoreText"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty0"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_toRightOf="@id/kitty1" android:layout_alignParentTop="true"
+                     android:layout_marginTop="98dp" android:focusable="false"/>
+        <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@id/kitty1" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" android:visibility="invisible"
+                android:onClick="onKittyClick" android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty2"
+                     android:layout_toRightOf="@id/kitty1" android:layout_alignTop="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty3"
+                     android:layout_toRightOf="@id/kitty2" android:layout_alignTop="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty4"
+                     android:layout_toRightOf="@id/kitty3" android:layout_alignTop="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty5"
+                     android:layout_toRightOf="@id/kitty4" android:layout_alignTop="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty6"
+                     android:layout_toRightOf="@id/kitty5" android:layout_alignTop="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty7"
+                     android:layout_alignLeft="@id/kitty1" android:layout_below="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty8"
+                     android:layout_toRightOf="@id/kitty1" android:layout_below="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty9"
+                     android:layout_toRightOf="@id/kitty2" android:layout_below="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty10"
+                     android:layout_toRightOf="@id/kitty3" android:layout_below="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty11"
+                     android:layout_toRightOf="@id/kitty4" android:layout_below="@id/kitty1"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty12"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_alignLeft="@id/kitty1" android:layout_below="@id/kitty14"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty13"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_alignLeft="@id/kitty0" android:layout_alignParentTop="true"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty14"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_alignLeft="@id/kitty1" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty15"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_toRightOf="@id/kitty1" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty16"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_toRightOf="@id/kitty2" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty17"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_toRightOf="@id/kitty3" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty18"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_toRightOf="@id/kitty4" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageButton android:layout_width="45dp" android:layout_height="45dp" android:id="@id/kitty19"
+                     android:visibility="invisible" android:onClick="onKittyClick"
+                     android:layout_alignLeft="@id/kitty0" android:layout_below="@id/kitty0"
+                     android:focusable="false"/>
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:id="@+id/imageView" android:layout_alignLeft="@id/scoreTextView"
+                android:layout_alignTop="@id/scoreTextView" android:background="@drawable/shadow"
+                android:clickable="false"/>
+    </RelativeLayout>
+</RelativeLayout>

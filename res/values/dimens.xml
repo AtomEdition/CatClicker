@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="follow_text_size">40dp</dimen>
+    <dimen name="follow_icon_size">60dp</dimen>
+    <dimen name="follow_icon_margin">8dp</dimen>
+    <dimen name="follow_button_back_text_size">20sp</dimen>
+    <dimen name="follow_button_back_margin">20sp</dimen>
+</resources>

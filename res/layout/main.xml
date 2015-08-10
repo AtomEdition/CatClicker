@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@id/menu_layout"
+        >
+    <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@id/button_sounds"
+            android:layout_marginRight="10dp" android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" android:layout_marginTop="10dp" android:onClick="onSoundsClick"/>
+    <ImageButton android:layout_width="40dp" android:layout_height="40dp" android:id="@id/button_music"
+                 android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                 android:layout_marginTop="10dp" android:layout_marginRight="55dp" android:visibility="visible"
+                 android:onClick="onMusicClick"/>
+    <ImageButton android:layout_width="40dp" android:layout_height="40dp" android:id="@id/button_vibrate"
+                 android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                 android:layout_marginTop="10dp" android:layout_marginRight="100dp" android:onClick="onVibrateClick"
+            />
+    <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="false" android:layout_marginTop="55dp" android:layout_centerInParent="true"
+            android:layout_alignParentBottom="false" android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false">
+        <ImageView
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:id="@id/speech_balloon"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="150dp"
+                android:layout_marginTop="60dp" android:src="@drawable/text_cloud"/>
+        <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@id/menu_cat_2"
+                android:layout_alignParentTop="true" android:layout_marginTop="100dp" android:layout_marginLeft="30dp"
+                android:onClick="onImageClick"/>
+        <ImageView android:layout_width="200dp" android:layout_height="200dp" android:id="@id/menu_cat_1"
+                   android:layout_alignParentLeft="true" android:layout_marginLeft="100dp"
+                   android:layout_centerVertical="true" android:onClick="onImageClick"
+                   android:layout_alignParentTop="true" android:layout_marginTop="180dp"
+                   android:background="@drawable/cat_menu10"/>
+        <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@id/button_start"
+                android:onClick="onClickStart"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="10dp"
+                android:layout_marginTop="230dp" android:background="@drawable/paw"/>
+    </RelativeLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Kitties already here!!1!" android:id="@id/text_view_high_score"
+              android:textColor="#ffffff" android:textStyle="bold" android:singleLine="false"
+              android:layout_alignParentTop="false"
+              style="@style/MenuText" android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp" android:layout_alignParentLeft="true"
+              android:layout_alignParentRight="true" android:layout_alignWithParentIfMissing="false"
+              android:layout_marginBottom="10dp" android:layout_alignParentBottom="true"
+              android:layout_centerInParent="true"/>
+    <ImageButton android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/button_other"
+                 android:onClick="onClickOther"
+                 android:layout_alignParentTop="false" android:layout_alignParentBottom="true"
+                 android:layout_marginBottom="50dp" android:layout_marginRight="30dp"
+                 android:layout_alignParentRight="true" android:background="@drawable/icon_google_play"/>
+</RelativeLayout>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cat Clicker</string>
+    <string name="connection_failure">Connection error!</string>
+    <string name="follow">Subscribe, buddy!</string>
+    <string name="follow_button_back">Back</string>
+    <string name="follow_text">More</string>
+</resources>
