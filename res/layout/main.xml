@@ -79,5 +79,16 @@
                  android:layout_marginBottom="50dp" android:layout_marginRight="30dp"
                  android:layout_alignParentRight="true"
                  android:background="@drawable/button_other"/>
+
+    <ImageButton android:layout_width="@dimen/promotion_button_size"
+                 android:layout_height="@dimen/promotion_button_size"
+                 android:id="@+id/promotion_button"
+                 android:onClick="onPromotionClick"
+                 android:background="@drawable/promotion_adopt"
+                 android:layout_gravity="left|bottom"
+                 android:layout_marginLeft="@dimen/promotion_button_margin"
+                 android:layout_marginTop="@dimen/promotion_button_margin"
+                 android:layout_alignParentTop="true"
+                 android:layout_alignParentLeft="true"/>
 </RelativeLayout>
 

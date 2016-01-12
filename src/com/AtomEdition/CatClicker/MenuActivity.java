@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
-import com.AtomEdition.CatClicker.ad.AdService;
 import com.AtomEdition.CatClicker.game.GameUtils;
+import com.AtomEdition.CatClicker.promotion.FollowActivity;
+import com.AtomEdition.CatClicker.promotion.PromotionButtonController;
 import com.AtomEdition.KittyClicker.R;
 
 import java.util.LinkedList;
@@ -41,6 +42,7 @@ public class MenuActivity extends ParentActivity {
         setButtonSoundsText();
         setButtonVibrateText();
         loadAd();
+        PromotionButtonController.getInstance(this);
     }
 
     private void loadAd(){
@@ -81,6 +83,7 @@ public class MenuActivity extends ParentActivity {
     public void onBackPressed() {
         if (back_pressed + 2000 > System.currentTimeMillis()){
             releasePlayer();
+            PromotionButtonController.getInstance(this).breakTimer();
             super.onBackPressed();
         }
         else
@@ -157,5 +160,9 @@ public class MenuActivity extends ParentActivity {
         Intent intent = new Intent(this, FollowActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void onPromotionClick(View view) {
+        PromotionButtonController.getInstance(this).makeUsFamous();
     }
 }
