@@ -37,6 +37,8 @@ public class AdService {
     }
 
     public void displayInterstitial(){
-        interstitialAd.show();
+        if (interstitialAd.isLoaded()) {
+            interstitialAd.show();
+        }
     }
 }

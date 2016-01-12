@@ -42,7 +42,7 @@ public class MenuActivity extends ParentActivity {
         setButtonSoundsText();
         setButtonVibrateText();
         loadAd();
-        PromotionButtonController.getInstance(this);
+        PromotionButtonController.getInstance(this).startTimer();
     }
 
     private void loadAd(){
@@ -62,6 +62,7 @@ public class MenuActivity extends ParentActivity {
             soundPool.play(soundIdTrue4, 1, 1, 0, 0, 1);
         }
         releasePlayer();
+        PromotionButtonController.getInstance(this).breakTimer();
         if(GameUtils.HIGH_SCORE>5){
             toGame();
         }

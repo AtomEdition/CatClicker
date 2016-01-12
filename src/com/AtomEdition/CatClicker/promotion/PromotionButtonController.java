@@ -22,7 +22,8 @@ public class PromotionButtonController {
     private final String URL_MOMMY_BALLS = "https://play.google.com/store/apps/details?id=com.AtomEdition.MommyBalls";
 
     private final int TIMER_INTERVAL = 1000;
-    CountDownTimer countDownTimer;
+    private CountDownTimer countDownTimer;
+    private boolean timerCanBeRestarted = true;
 
     private int currentIndex = 0;
     private String[] urls = {URL_FORTUNE_COOKIES, URL_ADOPT, URL_HIT_THE_NAIL, URL_MOMMY_BALLS};
@@ -49,10 +50,13 @@ public class PromotionButtonController {
 
             @Override
             public void onFinish() {
-                this.start();
+                if (timerCanBeRestarted) {
+                    this.start();
+                } else {
+                    timerCanBeRestarted = true;
+                }
             }
         };
-        countDownTimer.start();
     }
 
     private void switchImage(int index){
@@ -71,7 +75,12 @@ public class PromotionButtonController {
         }
     }
 
+    public void startTimer(){
+        timerCanBeRestarted = true;
+        countDownTimer.start();
+    }
+
     public void breakTimer(){
-        countDownTimer = null;
+        timerCanBeRestarted = false;
     }
 }
