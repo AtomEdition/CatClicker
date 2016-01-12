@@ -5,6 +5,21 @@
               android:layout_height="fill_parent"
               android:id="@id/menu_layout"
         >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:ads="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:orientation="vertical"
+                  android:gravity="bottom">
+
+        <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-9550981282535152/4987069827" />
+
+    </LinearLayout>
     <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -55,8 +70,7 @@
               android:textColor="#ffffff" android:textStyle="bold" android:singleLine="false"
               android:layout_alignParentTop="false"
               style="@style/MenuText" android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp" android:layout_alignParentLeft="true"
-              android:layout_alignParentRight="true" android:layout_alignWithParentIfMissing="false"
+              android:layout_alignParentLeft="true"
               android:layout_marginBottom="10dp" android:layout_alignParentBottom="true"
               android:layout_centerInParent="true"/>
     <ImageButton android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/button_other"

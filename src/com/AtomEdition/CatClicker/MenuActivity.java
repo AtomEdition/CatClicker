@@ -1,9 +1,8 @@
-package com.AtomEdition.KittyClicker;
+package com.AtomEdition.CatClicker;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Display;
@@ -11,7 +10,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
-import com.AtomEdition.KittyClicker.game.GameUtils;
+import com.AtomEdition.CatClicker.ad.AdService;
+import com.AtomEdition.CatClicker.game.GameUtils;
+import com.AtomEdition.KittyClicker.R;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -24,6 +25,10 @@ public class MenuActivity extends ParentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        initialization();
+    }
+
+    private void initialization(){
         setScreenSize();
         getHighScore();
         GameUtils.SOUNDS = getSoundsAndMusic(GameUtils.PREFERENCES_SOUNDS);
@@ -35,6 +40,11 @@ public class MenuActivity extends ParentActivity {
         setButtonMusicText();
         setButtonSoundsText();
         setButtonVibrateText();
+        loadAd();
+    }
+
+    private void loadAd(){
+        adService.showBanner(this);
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.AtomEdition.KittyClicker.game;
+package com.AtomEdition.CatClicker.game;
 
 /**
  * Created with IntelliJ IDEA.

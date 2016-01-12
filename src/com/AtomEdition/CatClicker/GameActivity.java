@@ -1,4 +1,4 @@
-package com.AtomEdition.KittyClicker;
+package com.AtomEdition.CatClicker;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
-import com.AtomEdition.KittyClicker.game.Kitty;
-import com.AtomEdition.KittyClicker.game.GameUtils;
+import com.AtomEdition.CatClicker.ad.AdService;
+import com.AtomEdition.CatClicker.game.Kitty;
+import com.AtomEdition.CatClicker.game.GameUtils;
+import com.AtomEdition.KittyClicker.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -28,36 +30,15 @@ import java.util.Random;
  */
 public class GameActivity extends ParentActivity{
 
-    private InterstitialAd interstitialAd;
-
-
-    private void setAd(){
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-9550981282535152/6376277427");
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        interstitialAd.loadAd(adRequest);
-    }
-
-    private void displayInterstitial() {
-        if (interstitialAd.isLoaded()) {
-            interstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdClosed() {
-                    super.onAdClosed();
-                    toMenu();
-                }
-            });
-            interstitialAd.show();
-        } else
-            toMenu();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        adService.loadInterstitial(this);
         setContentView(R.layout.game);
-        setAd();
+        initialization();
+    }
+
+    private void initialization(){
         startPlayer(R.raw.music_game);
         loadSoundPool();
         setImages();
@@ -92,7 +73,8 @@ public class GameActivity extends ParentActivity{
             releasePlayer();
             setHighScore();
             GameUtils.SCORE = 0;
-            displayInterstitial();
+            toMenu();
+            adService.displayInterstitial();
         }
         else
             Toast.makeText(getBaseContext(), "Press again to finish the game",
@@ -163,7 +145,8 @@ public class GameActivity extends ParentActivity{
         mediaPlayer.stop();
         setHighScore();
         GameUtils.SCORE = 0;
-        displayInterstitial();
+        toMenu();
+        adService.displayInterstitial();
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.AtomEdition.KittyClicker;
+package com.AtomEdition.CatClicker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+import com.AtomEdition.KittyClicker.R;
 
 /**
  * Created by FruityDevil on 07.08.2015.

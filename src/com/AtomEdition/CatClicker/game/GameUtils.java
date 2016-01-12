@@ -1,4 +1,4 @@
-package com.AtomEdition.KittyClicker.game;
+package com.AtomEdition.CatClicker.game;
 
 import java.util.LinkedList;
 import java.util.Random;

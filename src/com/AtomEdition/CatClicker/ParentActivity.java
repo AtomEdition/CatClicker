@@ -1,4 +1,4 @@
-package com.AtomEdition.KittyClicker;
+package com.AtomEdition.CatClicker;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.view.View;
 import android.widget.ImageButton;
-import com.AtomEdition.KittyClicker.game.GameUtils;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+import com.AtomEdition.CatClicker.ad.AdService;
+import com.AtomEdition.KittyClicker.R;
+import com.AtomEdition.CatClicker.game.GameUtils;
 
 import java.util.Random;
 
@@ -32,6 +32,7 @@ public abstract class ParentActivity extends Activity {
     int soundIdFalse0, soundIdFalse1, soundIdFalse2, soundIdFalse3, soundIdFalse4;
     int soundIdMenu;
     MediaPlayer mediaPlayer = new MediaPlayer();
+    protected AdService adService = AdService.getInstance();
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
